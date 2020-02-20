@@ -1,0 +1,17 @@
+html
+    head
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    body(class = "container")
+        h1(class = "text-center") Courses Teaching:
+        table(class = "table table-hover")
+            tr
+                th Course Name
+                th Students
+            for val in profDisp
+                tr
+                    td #{val[0]}
+                    td #{val[1]}
+        form(action='/addcourse')
+            input(class = "btn btn-primary" type="submit" value = "Add Course")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
